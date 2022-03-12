@@ -28,7 +28,7 @@ function canConstructWord(word, letters) {
   // console.log('word.....' + wordMap);
   // console.log('letters.....' + lettersMap);
   for(let key of wordMap.keys()){
-    if(lettersMap.get(key)) return false;
+    if(!lettersMap.get(key)) return false;
 
     let wordValue = wordMap.get(key);
     let letterValue = lettersMap.get(key);  

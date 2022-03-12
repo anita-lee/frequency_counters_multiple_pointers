@@ -10,12 +10,11 @@
 function averagePair(arr, avg) {
     if (arr === undefined) return false; 
 
-    let left = arr[0]; 
-    let right = arr[arr.length - 1]; 
-    let testAvg = parseFloat(left + right)/2; 
-    console.log(testAvg); 
-
+    let left = 0; 
+    let right = arr.length - 1; 
+    
     while (left < right){
+        let testAvg = (arr[left] + arr[right])/2; 
         if (avg === testAvg) return true; 
         else if (testAvg < avg) left++;
         else right--; 
